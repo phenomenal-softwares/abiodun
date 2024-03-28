@@ -1,0 +1,193 @@
+.nav-wrapper {
+  width: 100%;
+  position: -webkit-fixed; /* Safari */
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.grad-bar {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #ffffff, #f7c73c, #23A6D5, #00d224);
+  background-size: 400% 400%;
+  	-webkit-animation: gradbar 5s ease infinite;
+	-moz-animation: gradbar 5s ease infinite;
+	animation: gradbar 5s ease infinite;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  height: 50px;
+  overflow: hidden;
+}
+
+.navbar img {
+  height: 2em;
+  width: auto;
+  justify-self: start;
+  margin-left: 10px;
+  z-index: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  justify-content: space-evenly;
+}
+
+.nav-item a {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+.nav-item a:hover {
+  color: green;
+}
+
+.no-search {
+  transform: translate(0);
+  transition: transform 0.7s ease-in-out;
+}
+
+/* MOBILE MENU & ANIMATION */
+.menu-toggle .bar{
+  width: 25px;
+  height: 3px;
+  background-color: green;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  z-index: 1;
+  display: none;
+}
+
+.menu-toggle:hover{
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2){
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1){
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3){
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* KEYFRAME ANIMATIONS */
+
+@-webkit-keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes gradbar {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/* Media Queries */
+
+  /* Mobile Devices - Phones/Tablets */
+
+@media only screen and (max-width: 720px) {
+  /* MOBILE NAVIGATION */
+  .nav-wrapper {
+    width: 105%;
+  }
+  .navbar img {
+    height: 3em;
+    margin-left: 0;
+  }
+  .navbar ul {
+    display: flex;
+    background-image: url('https://github.com/phenomenal-softwares/abiodun/raw/main/nav-bg4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 0px;
+    background-color: #fff;
+    width: 105%;
+    height: 100vh;
+    transform: translate(0, -100%);
+    text-align: center;
+    overflow: hidden;
+    justify-self: end;
+  }
+  
+  .navbar li {
+    padding: 15px;
+  }
+  
+  .navbar li:first-child {
+    margin-top: 50px;
+  }
+  
+  .navbar li a {
+    font-size: 1.8rem;
+    border-bottom: 1px solid black;
+  }
+   
+  .menu-toggle, .bar {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .mobile-nav {
+  transform: translate(0%)!important;
+}
+
+}
