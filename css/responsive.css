@@ -1,0 +1,134 @@
+@media only screen and (max-width: 767px) {
+  .main-banner {
+    height: 100vh;
+  }
+	.heading h1{
+		font-size: 28px;
+	}
+	.heading p{
+		font-size: 14px;
+	}
+	.cd-headline.clip span{
+		font-size: 20px;
+	}
+	.heading-buttons {
+  flex-direction: column;
+}
+	.section-title h3{
+		font-size: 28px;
+	}
+	.section-title p{
+		font-size: 12px;
+	}
+	.message-box {
+	  flex-direction: column;
+	}
+	.services-container {
+	  display: flex;
+	  flex-direction: column;
+	}
+
+ .slider {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: #028174;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides .item {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 300px;
+  padding: 10px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+}
+.slides-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+.slides-nav > span {
+  display: flex;
+  width: 1.2rem;
+  height: 1.2rem;
+  color: white;
+  background: #028174;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.slides-nav > span:active {
+  top: 1px;
+}
+.slides-nav > span:focus {
+  background: #000;
+}
+.features-modal {
+  width: 80%;
+  margin-left: 0;
+}
+.check-button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.show-media-modal {
+  width: 80%;
+  margin-left: 0;
+}
+.media-container {
+  grid-template-columns: repeat(3, 1fr);
+  height: 50vh;
+}
+	
+	.skillsGrid{
+  grid-template-columns: repeat(5, 1fr);
+}
+.skillsLevel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.testimony-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+}
